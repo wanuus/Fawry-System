@@ -1,0 +1,19 @@
+package com.phase.FawrySystem.models;
+
+import java.util.Map;
+
+public class SchoolDonations implements ServiceProvider 
+{
+	private static int ID = 10;
+	public static int getID() {
+		return ID;
+	}
+	
+	@Override
+	public boolean Handler(Map<String, Object> mp) {
+		 if(mp.get("amount") == null)
+			 return false;
+		 return true;
+	}
+
+}
